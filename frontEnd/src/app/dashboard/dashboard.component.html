@@ -1,0 +1,52 @@
+<div class="background-dashboard">
+  
+  <div class="navbar container background">
+    <h1 class="text-center text-light">TODO APP</h1>
+    <button class="btn btn-primary button"
+      [routerLink]="['/addTodo']">
+      ADD TODO
+    </button>
+  </div>
+
+
+  <div class="m-5">
+    <div class="container text-center  background-display  bg-dark p-2">
+     
+      <div class="container" id="display">
+        <div class="item d-inline-flex">
+          <p class="text-center text-light bg-dark" *ngIf = "this.todos.length == 0">No Todos to display</p>
+          <table class="table-dark text-center" *ngIf = "this.todos.length > 0">
+            <tr>
+              <th >Title</th>
+              <th>Description</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+        
+            <tr *ngFor="let item of todos">
+              <th>{{ item.Title.slice(0,30) }}</th>
+              <th>{{ item.Discription.slice(0,30)}}</th>
+              <th>{{ item.StartDate }}</th>
+              <th>{{ item.EndDate }}</th>
+              <th>{{ item.Status }}</th>
+              <th>
+                <button class="btn btn-info mx-2" (click)="edit(item._id)">
+                  Edit</button><button class="btn btn-danger" (click)="delete(item)" >
+                  Delete
+                </button>
+              </th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+  <footer class="footer">
+    <p>Copyright parthm@innovatemr.com Reserved!</p>
+  </footer>
+
+

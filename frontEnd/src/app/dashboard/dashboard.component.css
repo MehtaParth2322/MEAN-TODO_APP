@@ -1,0 +1,56 @@
+body{
+    background-color: orange;
+}
+h1{
+    letter-spacing: 7px;
+    font-weight: 900;
+    
+}
+th{
+    padding: 10px;}
+
+.background-dashboard{
+
+    background: skyblue;
+    height: auto;
+    width: auto;
+    background-size: contain;
+    background-blend-mode: darken;
+    background-position: absolute;
+    padding-bottom: 20px;
+    
+    
+}
+.background-display{
+    display: flex;
+    
+}
+.button{
+    margin-left: auto;
+}
+.footer{
+
+   position: fixed;
+   bottom: 0;
+   margin: 0%;
+   padding: 18px;
+   width:100%;
+   height:50px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    
+}
+
+
+.navbar{
+
+    text-align: center;
+    width: auto;
+    color: blanchedalmond;
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+
+
